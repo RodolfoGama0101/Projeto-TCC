@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">gestone</string>
+    <string name="title_activity_main">gestone</string>
+    <string name="package_name">ionic.gestone</string>
+    <string name="custom_url_scheme">ionic.gestone</string>
+</resources>
