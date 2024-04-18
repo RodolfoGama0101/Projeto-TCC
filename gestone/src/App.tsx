@@ -10,10 +10,11 @@ import {
   setupIonicReact
 } from '@ionic/react';
 import { IonReactRouter } from '@ionic/react-router';
-import { ellipse, square, triangle, addCircleOutline, homeOutline, barChartOutline} from 'ionicons/icons';
+import { addCircleOutline, homeOutline, barChartOutline} from 'ionicons/icons';
 import Tab1 from './pages/Tab1';
 import Tab2 from './pages/Tab2';
 import Tab3 from './pages/Tab3';
+import './App.css'
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -59,10 +60,12 @@ const App: React.FC = () => (
             <IonIcon aria-hidden="true" icon={homeOutline} />
             <IonLabel>Home</IonLabel>
           </IonTabButton>
-          <IonTabButton tab="tab2" href="/tab2">
-            <IonIcon aria-hidden="true" icon={addCircleOutline} />
+
+          <IonTabButton tab="tab2" href="/tab2" className='tab2'>
+            <IonIcon aria-hidden="true" icon={addCircleOutline} color='sucess'/>
             <IonLabel>Add</IonLabel>
           </IonTabButton>
+          
           <IonTabButton tab="tab3" href="/tab3">
             <IonIcon aria-hidden="true" icon={barChartOutline} />
             <IonLabel>Grafics</IonLabel>
