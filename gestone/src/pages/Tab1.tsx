@@ -11,9 +11,12 @@ import {
   IonButtons,
   IonButton,
   IonIcon,
-  IonNavLink
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonText
 } from '@ionic/react';
-import { arrowBackCircle, arrowDown, arrowUp, cashOutline } from 'ionicons/icons';
+import { arrowDown, arrowUp, cashOutline } from 'ionicons/icons';
 import './Tab1.css';
 import HeaderComponent from '../components/header/HeaderComponent';
 
@@ -24,56 +27,75 @@ const Tab1: React.FC = () => {
       <HeaderComponent></HeaderComponent>
 
       <IonContent fullscreen>
+        <IonTitle class='ion-text-start ion-margin'>Dashboard</IonTitle>
 
-        <IonTitle class='title-dashboard'>Dashboard</IonTitle>
+        <IonGrid>
+          <IonRow>
+            {/* Saldo */}
+            <IonCol>
+              <IonButton color={'light'} expand='block' fill='solid'>
+                <IonGrid>
+                  <IonRow className='ion-align-items-center'>
+                    <IonCol>
+                      <IonText className='ion-text-start ion-text-uppercase'>
+                        <p>Saldo</p>
+                      </IonText>
+                      <IonText className='ion-text-start'>
+                        <h1>R$ 0,00</h1>
+                      </IonText>
+                    </IonCol>
+                    <IonCol>
+                      <IonIcon icon={cashOutline} className='ion-float-right ion-padding ion-border'></IonIcon>
+                    </IonCol>
+                  </IonRow>
+                </IonGrid>
+              </IonButton>
+            </IonCol>
 
-        <div className="cards">
-          <IonCard className='saldo-atual' color={'none'}>
-            <IonButton color={'dark'}>
+            {/* Receitas */}
+            <IonCol>
+              <IonButton color={'light'} expand='block'>
+                <IonGrid>
+                  <IonRow className='ion-align-items-center'>
+                    <IonCol>
+                      <IonText className='ion-text-start ion-text-uppercase'>
+                        <p>Receitas</p>
+                      </IonText>
+                      <IonText className='ion-text-start'>
+                        <h1>R$ 0,00</h1>
+                      </IonText>
+                    </IonCol>
+                    <IonCol>
+                      <IonIcon icon={arrowUp} className='ion-float-right ion-padding ion-border'></IonIcon>
+                    </IonCol>
+                  </IonRow>
+                </IonGrid>
+              </IonButton>
+            </IonCol>
 
-              <div className="card-button">
-                <IonCardHeader>
-                  <IonCardSubtitle>Saldo Atual &#62;</IonCardSubtitle>
-                  <IonCardTitle>R$ 0,00</IonCardTitle>
-                </IonCardHeader>
+            {/* Despesas */}
+            <IonCol>
+              <IonButton color={'light'} expand='block'>
+                <IonGrid>
+                  <IonRow className='ion-align-items-center'>
+                    <IonCol>
+                      <IonText className='ion-text-start ion-text-uppercase'>
+                        <p>Despesas</p>
+                      </IonText>
+                      <IonText className='ion-text-start'>
+                        <h1>R$ 0,00</h1>
+                      </IonText>
+                    </IonCol>
+                    <IonCol>
+                      <IonIcon icon={arrowDown} className='ion-float-right ion-padding ion-border'></IonIcon>
+                    </IonCol>
+                  </IonRow>
+                </IonGrid>
+              </IonButton>
+            </IonCol>
 
-                <IonIcon icon={cashOutline} size='large' className='icon-card'></IonIcon>
-              </div>
-
-            </IonButton>
-
-          </IonCard>
-
-          <IonCard className='receitas' color={'none'}>
-
-            <IonButton color={'dark'}>
-              <div className="card-button">
-                <IonCardHeader>
-                  <IonCardSubtitle>Receitas &#62;</IonCardSubtitle>
-                  <IonCardTitle>R$ 0,00</IonCardTitle>
-                </IonCardHeader>
-
-                <IonIcon icon={arrowUp} size='large' className='icon-card'></IonIcon>
-              </div>
-            </IonButton>
-
-          </IonCard>
-
-          <IonCard className='despesas' color={'none'}>
-            <IonButton color={'dark'}>
-              <div className="card-button">
-                <IonCardHeader>
-                  <IonCardSubtitle>Despesas &#62;</IonCardSubtitle>
-                  <IonCardTitle>R$ 0,00</IonCardTitle>
-                </IonCardHeader>
-
-                <IonIcon icon={arrowDown} size='large' className='icon-card'></IonIcon>
-              </div>
-            </IonButton>
-
-          </IonCard>
-        </div>
-
+          </IonRow>
+        </IonGrid>
       </IonContent>
 
     </IonPage>
