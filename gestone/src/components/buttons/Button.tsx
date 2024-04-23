@@ -16,7 +16,7 @@ const SaldoButtonComponent: React.FC = () => {
                         </IonText>
                     </IonCol>
                     <IonCol>
-                        <IonIcon icon={cashOutline} className='ion-float-right ion-padding ion-border'></IonIcon>
+                        <IonIcon icon={cashOutline} className='ion-float-right ion-padding ion-border home-buttons-icons'></IonIcon>
                     </IonCol>
                 </IonRow>
             </IonGrid>

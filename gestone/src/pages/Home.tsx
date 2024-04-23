@@ -51,7 +51,7 @@ const Home: React.FC = () => {
                       </IonText>
                     </IonCol>
                     <IonCol>
-                      <IonIcon icon={arrowUp} className='ion-float-right ion-padding ion-border'></IonIcon>
+                      <IonIcon icon={arrowUp} className='ion-float-right ion-padding ion-border home-buttons-icons'></IonIcon>
                     </IonCol>
                   </IonRow>
                 </IonGrid>
@@ -72,7 +72,7 @@ const Home: React.FC = () => {
                       </IonText>
                     </IonCol>
                     <IonCol>
-                      <IonIcon icon={arrowDown} className='ion-float-right ion-padding ion-border'></IonIcon>
+                      <IonIcon icon={arrowDown} className='ion-float-right ion-padding ion-border home-buttons-icons'></IonIcon>
                     </IonCol>
                   </IonRow>
                 </IonGrid>
