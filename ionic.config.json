@@ -1,0 +1,7 @@
+{
+  "name": "gestone",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react-vite"
+}
